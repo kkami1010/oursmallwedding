@@ -31,8 +31,8 @@
   --color-naver: #03c75a;
   --color-toast-bg: rgba(90, 74, 82, 0.9);
 
-  --font-serif: 'Gowun Batang', 'Georgia', serif;
-  --font-round: -apple-system, 'Apple SD Gothic Neo', 'Pretendard', 'Noto Sans KR', sans-serif;
+  --font-serif: 'NanumBarunGothic', 'Apple SD Gothic Neo', sans-serif;
+  --font-round: 'NanumBarunGothic', 'Apple SD Gothic Neo', sans-serif;
 
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -423,7 +423,7 @@ a {
 
 .section__title {
   font-family: var(--font-serif);
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 2px;
   margin-bottom: var(--spacing-lg);
@@ -471,15 +471,21 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   padding: 0;
   overflow: hidden;
-  background: linear-gradient(180deg, #FFD6DF 0%, #D6EAFF 100%);
+  background: var(--color-bg);
 }
 
 .hero__photo-wrap {
-  position: absolute;
-  inset: 0;
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1020 / 1671;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 0;
+  background: var(--color-bg);
 }
 
 .hero__photo-wrap::after {
@@ -501,7 +507,7 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center;
 }
 
 .hero__content {
@@ -509,8 +515,9 @@ a {
   z-index: 2;
   text-align: center;
   color: var(--color-text);
-  padding: 0 var(--spacing-md) var(--spacing-md);
+  padding: var(--spacing-lg) var(--spacing-md) var(--spacing-md);
   width: 100%;
+  background: var(--color-bg);
 }
 
 .hero__label {
@@ -543,7 +550,7 @@ a {
 
 .hero__date,
 .hero__venue {
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: 400;
   letter-spacing: 1px;
   color: var(--color-text-light);
@@ -560,10 +567,12 @@ a {
   z-index: 2;
   padding: var(--spacing-lg) var(--spacing-md) calc(var(--spacing-lg) + var(--safe-bottom));
   text-align: center;
+  width: 100%;
+  background: var(--color-bg);
 }
 
 .countdown__label {
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 400;
   letter-spacing: 3px;
   color: var(--color-text-light);
@@ -637,7 +646,7 @@ a {
 }
 
 .greeting__text {
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 2;
   color: var(--color-text-light);
@@ -776,7 +785,7 @@ a {
 }
 
 .rsvp__desc {
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.8;
   color: var(--color-text-light);
@@ -804,7 +813,7 @@ a {
 }
 
 .story__text {
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 2;
   color: var(--color-text-light);
@@ -1325,7 +1334,7 @@ a {
   }
 
   .section__title {
-    font-size: 1.375rem;
+    font-size: 1.625rem;
   }
 
   .curtain__names {
