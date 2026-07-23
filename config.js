@@ -39,7 +39,8 @@ const CONFIG = {
     time: "12:00",
     venue: "엔젤스데이",
     hall: "전체 대관",
-    address: "경기 김포시 김포한강4로 113 신한프라자 12층",
+    address: "경기 김포시 김포한강4로 113 신한프라자 12층\n(장기역 2번 출구 도보 1분)",
+    parking: "신한프라자 지하 1층~지하 4층\n(주차권 3시간 제공)\n\n",
     tel: "031-985-4005"
   },
 
@@ -74,13 +75,9 @@ const CONFIG = {
   accounts: {
     groom: [
       { role: "신랑", name: "최규배", bank: "국민은행", number: "000-000-000000" },
-      { role: "아버지", name: "최돈화", bank: "신한은행", number: "000-000-000000" },
-      { role: "어머니", name: "이연숙", bank: "우리은행", number: "000-000-000000" }
     ],
     bride: [
-      { role: "신부", name: "김현영", bank: "국민은행", number: "000-000-000000" },
-      { role: "아버지", name: "김주형", bank: "기업은행", number: "000-000-000000" },
-      { role: "어머니", name: "김명희", bank: "농협은행", number: "000-000-000000" }
+      { role: "신부", name: "김현영", bank: "국민은행", number: "000-000-000000" }
     ]
   },
 

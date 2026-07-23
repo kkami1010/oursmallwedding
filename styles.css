@@ -921,6 +921,16 @@ a {
   font-weight: 400;
   color: var(--color-text-muted);
   line-height: 1.6;
+  white-space: pre-line;
+}
+
+.location__parking {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  white-space: pre-line;
+  margin-top: var(--spacing-md);
 }
 
 .location__tel {

@@ -571,6 +571,11 @@
     $('#locationVenue').textContent = w.venue;
     $('#locationHall').textContent = w.hall;
     $('#locationAddress').textContent = w.address;
+    const parkingEl = $('#locationParking');
+    if (w.parking) {
+      parkingEl.textContent = `주차\n${w.parking}`;
+      parkingEl.hidden = false;
+    }
     $('#locationTel').textContent = w.tel ? `Tel. ${w.tel}` : '';
     $('#locationMapImg').src = 'images/location/1.jpg';
     $('#kakaoMapBtn').href = ml.kakao || '#';
