@@ -442,9 +442,14 @@
       div.className = 'story__photo-item animate-item';
       div.setAttribute('data-animate', 'fade-up');
       div.innerHTML = `<img src="${src}" alt="스토리 사진 ${i + 1}" loading="lazy">`;
-      div.addEventListener('click', () => openPhotoModal(storyImages, i));
       container.appendChild(div);
     });
+
+    // 스토리 사진은 확대하거나 클릭할 수 없도록 차단합니다.
+    container.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+    }, true);
   }
 
   /* ═══════════════════════════════════════════
@@ -556,7 +561,6 @@
       div.setAttribute('data-animate', 'scale-in');
       div.style.setProperty('--delay', i);
       div.innerHTML = `<img src="${src}" alt="갤러리 사진 ${i + 1}" loading="lazy">`;
-      div.addEventListener('click', () => openPhotoModal(galleryImages, i));
       container.appendChild(div);
     });
   }
@@ -571,6 +575,11 @@
     $('#locationVenue').textContent = w.venue;
     $('#locationHall').textContent = w.hall;
     $('#locationAddress').textContent = w.address;
+    const parkingEl = $('#locationParking');
+    if (w.parking) {
+      parkingEl.textContent = `주차\n${w.parking}`;
+      parkingEl.hidden = false;
+    }
     $('#locationTel').textContent = w.tel ? `Tel. ${w.tel}` : '';
     $('#locationMapImg').src = 'images/location/1.jpg';
     $('#kakaoMapBtn').href = ml.kakao || '#';
